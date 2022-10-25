@@ -17,9 +17,15 @@ function Todolist(props:PropsType) {
                 <button>+</button>
             </div>
             <div className={"task_list"}>
-                <div><input checked={props.tasks[0].isDone} type="checkbox"/>{props.tasks[0].title}</div>
-                <div><input checked={props.tasks[1].isDone}type="checkbox"/>{props.tasks[1].title}</div>
-                <div><input checked={props.tasks[2].isDone} type="checkbox"/>{props.tasks[2].title}</div>
+                {
+                    props.tasks.map(t=>{
+                        return <div>
+                            <input
+                                checked={t.isDone}
+                                type="checkbox"/>{t.title}
+                        </div>
+                    })
+                }
             </div>
             <div>
                 <button>all</button>
