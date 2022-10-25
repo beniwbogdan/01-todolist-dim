@@ -6,7 +6,9 @@
 .App > div {
   margin-right: 50px;
 }
-
+.input_button{
+  margin-bottom: 10px;
+}
 .task{
   background-color: #99dcdc;
   width: 200px;
@@ -20,6 +22,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
 }
 
 .task_list div{
@@ -28,4 +31,5 @@
   border-right: 1px solid;
   border-left: 1px solid;
   margin-bottom: 5px;
+  justify-content: space-around;
 }
