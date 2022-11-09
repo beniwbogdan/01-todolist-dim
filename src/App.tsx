@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Todolist, {TaskType} from "./Todolist";
 import {v1} from "uuid";
+
 export type FilterValuesType="all"|"completed"|"active";
 function App() {
 
@@ -10,6 +11,7 @@ let [tasks, setTasks]=useState<Array<TaskType>>([
     {id:v1(),title:"React", isDone:true},
     {id:v1(),title:"MobX", isDone:false},
 ]);
+    console.log(tasks)
 let [filter, setFilter]=useState<FilterValuesType>("all");
 
 let changeFilter=(value:FilterValuesType)=>{

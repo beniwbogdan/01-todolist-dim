@@ -23,7 +23,7 @@ function Todolist(props:PropsType) {
             <div className={"task_list"}>
                 {
                     props.tasks.map(t=>{
-                        return <div>
+                        return <div key={t.id}>
                             <input
                                 checked={t.isDone}
                                 type="checkbox"/>{t.title}
